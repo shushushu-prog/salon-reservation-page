@@ -11,6 +11,7 @@ import {
 import { siteConfig } from "@/config/site";
 
 const reservationIcons = [MessageCircle, Send, Instagram];
+const serviceColors = ["#dfead8", "#f4ead9", "#e9eee0"];
 
 function SectionTitle({
   eyebrow,
@@ -131,21 +132,41 @@ export default function Home() {
           <SectionTitle
             eyebrow="Service"
             title="サービス"
-            text="お店の特徴を短く紹介します。"
+            text="写真と短い説明で、雰囲気が伝わります。"
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <article
                 key={service.title}
-                className="rounded-lg bg-white p-5 shadow-sm ring-1 ring-[#eadfcd]"
+                className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-[#eadfcd]"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#eef4e9] text-[#536d55]">
-                  <Heart className="h-5 w-5" />
+                {service.image ? (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                ) : (
+                  <div
+                    className="grid aspect-[4/3] place-items-center"
+                    style={{ backgroundColor: serviceColors[index % serviceColors.length] }}
+                  >
+                    <div className="text-center text-[#536d55]">
+                      <Heart className="mx-auto h-8 w-8" />
+                      <p className="mt-3 text-sm font-bold tracking-[0.18em]">
+                        SERVICE PHOTO
+                      </p>
+                    </div>
+                  </div>
+                )}
+                <div className="p-5">
+                  <h3 className="text-xl font-bold text-[#34322e]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-7 text-[#69645c]">
+                    {service.text}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-[#34322e]">{service.title}</h3>
-                <p className="mt-2 text-base leading-7 text-[#69645c]">
-                  {service.text}
-                </p>
               </article>
             ))}
           </div>
@@ -285,7 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-14 sm:px-8 lg:px-10">
+      <section className="px-5 pb-24 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-5xl rounded-lg bg-[#536d55] px-6 py-9 text-center text-white shadow-2xl shadow-[#536d55]/20 sm:px-10 sm:py-12">
           <p className="text-sm font-bold tracking-[0.18em] text-[#e8f0e2] uppercase">
             Reservation
@@ -307,6 +328,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="fixed inset-x-0 bottom-0 z-20 border-t border-[#e2d6c3] bg-[#fffdf8]/95 p-3 shadow-[0_-10px_30px_rgba(83,109,85,0.12)] backdrop-blur sm:hidden">
+        <a
+          href={links.line}
+          className="flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#536d55] px-5 text-base font-bold text-white"
+        >
+          <MessageCircle className="h-5 w-5" />
+          LINEで予約
+        </a>
+      </div>
     </main>
   );
 }

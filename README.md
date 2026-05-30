@@ -22,6 +22,7 @@ npm run dev
 - `shop.heroImage`: ファーストビューに表示する画像URL。空欄の場合はプレースホルダーが表示されます。
 - `links`: LINE、Googleフォーム、Instagram、Google Map のURL
 - `services`: サービス内容
+- `services[].image`: 各サービスカードに表示する画像URL。空欄の場合は仮の写真枠が表示されます。
 - `menu`: メニュー名、価格、所要時間、説明
 - `reservationMethods`: 予約方法のカード。`linkKey` に `line`、`googleForm`、`instagram` のいずれかを指定します。
 - `shopInfo`: 営業時間、住所、アクセス

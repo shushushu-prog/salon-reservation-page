@@ -17,6 +17,7 @@ export type SiteConfig = {
   services: {
     title: string;
     text: string;
+    image: string;
   }[];
   menu: {
     name: string;
@@ -59,14 +60,17 @@ export const siteConfig: SiteConfig = {
     {
       title: "丁寧な相談",
       text: "ご希望を伺い、似合う内容をご提案します。",
+      image: "",
     },
     {
       title: "やさしい施術",
       text: "状態に合わせて無理なく進めます。",
+      image: "",
     },
     {
       title: "予約制サロン",
       text: "落ち着いた時間をお過ごしいただけます。",
+      image: "",
     },
   ],
   menu: [
