@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffdf8;
+  --foreground: #34322e;
+  --cream: #f8efe1;
+  --sage: #9caf97;
+  --sage-dark: #536d55;
+  --sand: #dcc9ad;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
