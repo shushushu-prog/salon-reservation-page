@@ -11,6 +11,7 @@ export type SiteConfig = {
     tagline: string;
     description: string;
     heroNote: string;
+    heroImage: string;
   };
   links: ShopLinks;
   services: {
@@ -43,10 +44,10 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
   shop: {
     name: "mori nail & care",
-    tagline: "日常に、少しだけ深呼吸できる指先を。",
-    description:
-      "完全予約制の小さなプライベートサロンです。ネイル、まつ毛、ヘア、整体などの個人店向けテンプレートとして、内容を差し替えて使えます。",
-    heroNote: "初めての方もお気軽にご相談ください",
+    tagline: "指先から、ここちよく。",
+    description: "完全予約制の小さなプライベートサロン。予約や相談はこちらからどうぞ。",
+    heroNote: "初めての方も歓迎",
+    heroImage: "",
   },
   links: {
     line: "https://line.me/R/ti/p/@sample",
@@ -56,56 +57,56 @@ export const siteConfig: SiteConfig = {
   },
   services: [
     {
-      title: "丁寧なカウンセリング",
-      text: "お悩みやご希望を伺い、生活に馴染むデザインやケアをご提案します。",
+      title: "丁寧な相談",
+      text: "ご希望を伺い、似合う内容をご提案します。",
     },
     {
-      title: "一人ひとりに合わせた施術",
-      text: "爪や肌、まつ毛、髪、身体の状態に合わせて無理のないメニューを選びます。",
+      title: "やさしい施術",
+      text: "状態に合わせて無理なく進めます。",
     },
     {
-      title: "落ち着ける予約制サロン",
-      text: "周りを気にせず過ごせる、個人店らしいやわらかな時間をご用意しています。",
+      title: "予約制サロン",
+      text: "落ち着いた時間をお過ごしいただけます。",
     },
   ],
   menu: [
     {
-      name: "シンプルケアコース",
+      name: "シンプルケア",
       price: "5,500円",
       time: "60分",
-      description: "初めての方や定期ケアにおすすめの基本メニューです。",
+      description: "初めての方にもおすすめです。",
     },
     {
       name: "デザインコース",
       price: "7,700円",
       time: "90分",
-      description: "季節感やお好みに合わせて、少し華やかに仕上げます。",
+      description: "季節や好みに合わせて仕上げます。",
     },
     {
-      name: "リラックス集中コース",
+      name: "ゆったりコース",
       price: "9,900円",
       time: "120分",
-      description: "カウンセリングから仕上げまで、ゆったり受けたい方向けです。",
+      description: "相談から仕上げまで丁寧に。",
     },
   ],
   reservationMethods: [
     {
       title: "LINEで予約",
-      description: "希望日時とメニューを送るだけ。空き状況を返信します。",
+      description: "希望日時を送るだけ。",
       linkKey: "line",
-      label: "LINEで予約する",
+      label: "LINEを開く",
     },
     {
-      title: "Googleフォームで予約",
-      description: "必要事項を入力して送信。営業時間内に折り返します。",
+      title: "フォーム予約",
+      description: "必要事項を入力して送信。",
       linkKey: "googleForm",
       label: "フォームを開く",
     },
     {
-      title: "Instagram DMで相談",
-      description: "メニュー選びやデザイン相談だけでも大丈夫です。",
+      title: "DMで相談",
+      description: "メニュー相談もできます。",
       linkKey: "instagram",
-      label: "DMで相談する",
+      label: "Instagramへ",
     },
   ],
   shopInfo: {
@@ -116,19 +117,15 @@ export const siteConfig: SiteConfig = {
   faqs: [
     {
       question: "当日予約はできますか？",
-      answer: "空きがあれば可能です。LINEまたはInstagram DMでお問い合わせください。",
+      answer: "空きがあれば可能です。LINEでお問い合わせください。",
     },
     {
-      question: "支払い方法は何が使えますか？",
-      answer: "現金、クレジットカード、各種キャッシュレス決済に対応しています。",
+      question: "支払い方法は？",
+      answer: "現金、カード、各種キャッシュレス決済に対応しています。",
     },
     {
       question: "メニューに迷っています。",
-      answer: "予約前のご相談も歓迎です。状態やご希望に合わせてご提案します。",
-    },
-    {
-      question: "キャンセルはいつまで可能ですか？",
-      answer: "前日までにご連絡ください。当日の変更はできるだけ早めにご相談ください。",
+      answer: "予約前のご相談も歓迎です。",
     },
   ],
 };

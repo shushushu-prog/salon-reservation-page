@@ -19,6 +19,7 @@ npm run dev
 主に編集する項目は以下です。
 
 - `shop`: 店舗名、キャッチコピー、紹介文
+- `shop.heroImage`: ファーストビューに表示する画像URL。空欄の場合はプレースホルダーが表示されます。
 - `links`: LINE、Googleフォーム、Instagram、Google Map のURL
 - `services`: サービス内容
 - `menu`: メニュー名、価格、所要時間、説明
